@@ -39,7 +39,8 @@ namespace Elmah.io.Sitecore.log4net
 				Data = data,
 				Application = Application ?? loggingEvent.Domain,
 				Source = loggingEvent.LoggerName,
-				User = loggingEvent.UserName
+				User = loggingEvent.UserName,
+				Hostname = Environment.MachineName,
 			};
 
 			Logger.Log(message);
